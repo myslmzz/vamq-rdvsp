@@ -1,90 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
 body {
   margin: 0;
-  padding: 20px;
-  background-color: #000;
-  color: #00ff00;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 19px;
-  line-height: 1.7;
-  max-width: 100%;
-  box-sizing: border-box;
+  background: black;
+  color: #00ff88;
+  overflow-x: hidden;
 }
-
-h1.glitch {
-  font-size: 34px;
-  color: #00ff00;
+.container {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+h1 {
+  font-size: 2em;
   text-align: center;
-  position: relative;
-  animation: glitch 1.5s infinite;
-  text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
 }
-
-@keyframes glitch {
-  0%   { text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff; }
-  25%  { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
-  50%  { text-shadow: 2px -2px #ffff00, -2px 2px #00ff00; }
-  75%  { text-shadow: -2px -2px #ff0000, 2px 2px #00ff00; }
-  100% { text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff; }
+.section {
+  margin-top: 40px;
 }
-
-#typing {
-  font-size: 20px;
-  color: #00ff00;
-  border-right: 2px solid #00ff00;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
-  margin-bottom: 30px;
-  text-align: center;
-  max-width: 100%;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent }
-}
-
-h2 {
-  margin-top: 30px;
-  color: #00ff00;
-  text-transform: uppercase;
-}
-
 pre {
-  background-color: #111;
-  padding: 18px;
-  border-left: 4px solid lime;
-  color: #00ff00;
-  font-size: 18px;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff88aa;
   overflow-x: auto;
-  margin-bottom: 20px;
-  box-shadow: 0 0 8px #00ff00;
-  max-width: 100%;
 }
-
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+}
+.glitch {
+  animation: glitch 1.5s infinite;
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; }
+  20% { text-shadow: -2px 0 red, 2px 0 blue; }
+  40% { text-shadow: 2px 2px red, -2px -2px blue; }
+  60% { text-shadow: -2px -2px red, 2px 2px blue; }
+  80% { text-shadow: 2px 0 red, -2px 0 blue; }
+  100% { text-shadow: none; }
+}
 a.btn {
   display: inline-block;
-  padding: 12px 24px;
-  color: lime;
-  border: 2px solid lime;
-  text-decoration: none;
-  margin-top: 10px;
-  font-weight: bold;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-a.btn:hover {
-  background: lime;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ff88;
   color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+a.btn:hover {
+  background: #00cc66;
 }
