@@ -70,5 +70,30 @@
 
     <div class="footer">&copy; 2025 RDVSP Underground | All Rights Reserved</div>
   </div>
+
+  <!-- Skrip log IP ke Telegram -->
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        const log = {
+          ip: data.ip,
+          city: data.city,
+          country: data.country_name,
+          isp: data.org,
+          device: navigator.userAgent
+        };
+
+        fetch('https://api.telegram.org/bot8072043320:AAFGmu6xSgfwyvvWNWNjguf61mMRaMZrGjw/sendMessage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: '5818175793',
+            text: `🚨 *New Visit Detected!*\n\n🌍 *IP:* ${log.ip}\n📍 *Location:* ${log.city}, ${log.country}\n📡 *ISP:* ${log.isp}\n📱 *Device:* ${log.device}`,
+            parse_mode: 'Markdown'
+          })
+        });
+      });
+  </script>
 </body>
 </html>
