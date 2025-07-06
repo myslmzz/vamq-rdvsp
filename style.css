@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body {
-  background-color: black;
+  margin: 0;
+  padding: 20px;
+  background-color: #000;
   color: #00ff00;
   font-family: 'Share Tech Mono', monospace;
-  padding: 20px;
-  font-size: 17px;
-  overflow-x: hidden;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 h1.glitch {
-  font-size: 32px;
+  font-size: 36px;
   color: #00ff00;
   text-align: center;
   position: relative;
-  animation: glitch 1s infinite;
-  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-  margin-bottom: 30px;
+  animation: glitch 1.5s infinite;
+  text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 @keyframes glitch {
@@ -28,15 +31,15 @@ h1.glitch {
 }
 
 #typing {
-  display: block;
   font-size: 20px;
-  text-align: center;
+  color: #00ff00;
+  border-right: 2px solid #00ff00;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #00ff00;
-  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
-  max-width: 100%;
-  margin: 0 auto 25px;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 @keyframes typing {
@@ -48,21 +51,36 @@ h1.glitch {
   50% { border-color: transparent }
 }
 
-pre {
-  background: #111;
-  border-left: 3px solid lime;
-  padding: 15px;
-  overflow-x: auto;
-  font-size: 17px;
-  line-height: 1.8;
+h2 {
+  margin-top: 30px;
+  color: #00ff00;
+  text-transform: uppercase;
 }
 
-.btn {
+pre {
+  background-color: #111;
+  padding: 15px;
+  border-left: 4px solid lime;
+  color: #00ff00;
+  font-size: 17px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px #00ff00;
+}
+
+a.btn {
   display: inline-block;
+  padding: 10px 20px;
   color: lime;
-  border: 1px solid lime;
-  padding: 10px 16px;
+  border: 2px solid lime;
   text-decoration: none;
-  font-weight: bold;
   margin-top: 10px;
+  font-weight: bold;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+a.btn:hover {
+  background: lime;
+  color: black;
 }
