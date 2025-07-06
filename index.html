@@ -3,15 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <title>W.A CRASHER | RDVSP</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: black;
+      color: #00ff88;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    pre {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ff88aa;
+      overflow-x: auto;
+      font-size: 17px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    .glitch {
+      animation: glitch 1.5s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      20% { text-shadow: -2px 0 red, 2px 0 blue; }
+      40% { text-shadow: 2px 2px red, -2px -2px blue; }
+      60% { text-shadow: -2px -2px red, 2px 2px blue; }
+      80% { text-shadow: 2px 0 red, -2px 0 blue; }
+      100% { text-shadow: none; }
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00ff88;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    a.btn:hover {
+      background: #00cc66;
+    }
+  </style>
 </head>
 <body>
 
-  <h1 class="glitch" data-text="W.A CRASHER | RDVSP">W.A CRASHER | RDVSP</h1>
-  <div id="typing">Initializing console interface...</div>
+  <div class="container">
+    <h1 class="glitch">W.A CRASHER | RDVSP</h1>
 
-  <h2>➤ WHAT'S INTERESTING?</h2>
-  <pre>
+    <div class="section">
+      <h2>➤ WHAT'S INTERESTING?</h2>
+      <pre>
 • Real Application — Not Website 🔥
 • WhatsApp Bug Support 🔥
 • Auto Update & Upgrade 🔥
@@ -30,10 +103,12 @@
 • Permanent WhatsApp Damage 🔥
 • Spam Call 🔥
 • Spy Group 🔥
-  </pre>
+      </pre>
+    </div>
 
-  <h2>➤ PRICE & ROLES</h2>
-  <pre>
+    <div class="section">
+      <h2>➤ PRICE & ROLES</h2>
+      <pre>
 [ MEMBER ]
 RM5/mo | RM10/Lifetime
 ▸ Unlock Bug | Pause 60s
@@ -49,9 +124,13 @@ RM20/mo | RM30/Lifetime
 [ OWNER ]
 RM75 Lifetime
 ▸ Full Access | No Pause
-  </pre>
+      </pre>
+    </div>
 
-  <a href="https://t.me/vamq_f4ck" class="btn">📦 Buy Now</a>
+    <div class="footer">
+      📦 Buy Now ➤ <a href="https://t.me/vamq_f4ck" class="btn">@vamq_f4ck</a>
+    </div>
+  </div>
 
   <script>
     fetch("logger.php", {
