@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  background-color: black;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 20px;
+  font-size: 17px;
+  overflow-x: hidden;
+}
+
+h1.glitch {
+  font-size: 32px;
+  color: #00ff00;
+  text-align: center;
+  position: relative;
+  animation: glitch 1s infinite;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+  margin-bottom: 30px;
+}
+
+@keyframes glitch {
+  0%   { text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff; }
+  25%  { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
+  50%  { text-shadow: 2px -2px #ffff00, -2px 2px #00ff00; }
+  75%  { text-shadow: -2px -2px #ff0000, 2px 2px #00ff00; }
+  100% { text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff; }
+}
+
+#typing {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff00;
+  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+  max-width: 100%;
+  margin: 0 auto 25px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+pre {
+  background: #111;
+  border-left: 3px solid lime;
+  padding: 15px;
+  overflow-x: auto;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  color: lime;
+  border: 1px solid lime;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
